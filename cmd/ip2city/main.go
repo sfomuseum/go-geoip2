@@ -32,7 +32,7 @@ func main() {
 	if *as_json {
 		wr.Write([]byte(`[`))
 	}
-	
+
 	for i, addr := range flag.Args() {
 
 		ip := net.ParseIP(addr)
@@ -42,11 +42,11 @@ func main() {
 		if err != nil {
 			log.Fatalf("Failed to determine city for '%s', %v", addr, err)
 		}
-		
+
 		if *as_json && i > 0 {
 			wr.Write([]byte(`,`))
 		}
-		
+
 		enc := json.NewEncoder(wr)
 		err = enc.Encode(record)
 
@@ -58,5 +58,5 @@ func main() {
 	if *as_json {
 		wr.Write([]byte(`]`))
 	}
-	
+
 }
