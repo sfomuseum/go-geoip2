@@ -2,6 +2,10 @@
 
 Opinionated Go package providing tools for working with MaxMind GeoLite2 databases. This package is not specific to SFO Museum but it is specific to our needs.
 
+## Documentation
+
+[![Go Reference](https://pkg.go.dev/badge/github.com/sfomuseum/go-geoip2.svg)](https://pkg.go.dev/github.com/sfomuseum/go-geoip2)
+
 ## Motivation
 
 We want to be able to localize dates and times for people visiting SFO Museum websites and in order to do that we need to know "where" they are. Not precisely where they are but just what timezone they are in.
@@ -128,6 +132,32 @@ $> ./bin/ip2city -json 219.3.47.6 | jq
   }
 ]
 ```
+
+### location
+
+The `location` tool derives the timezone (location) for one or more addresses by querying an instance of the `server` tool, described below, that has been deployed as a AWS Lambda Function URL.
+
+```
+$> ./bin/location -h
+Usage of ./bin/location:
+  -client-uri string
+    	A valid aaronland/go-aws-lambda/functionurl.Client URI in the form of 'functionurl://?credentials={CREDENTIALS}&region={AWS_REGION}' where {CREDENTIALS} is a valid aaronland/go-aws-session credentials strings as described in https://github.com/aaronland/go-aws-session#credentials.
+  -uri-template sfomuseum/go-geoip2/app/server
+    	A valid URI template where an instance of the sfomuseum/go-geoip2/app/server application that has been deployed as a AWS Lambda Function URL.
+```
+
+For example:
+
+```
+$> ./bin/location \
+	-client-uri 'aws://?credentials={CREDENTIALS}&region={REGION}' \
+	-uri-template 'https://FUNCTION_URL_ID.lambda-url.AWS_REGION.on.aws/timezone?address={address}' \
+	219.3.47.6
+	
+Asia/Tokyo
+```
+
+_This tool uses the [sfomuseum-go-geoip2/functionurl](functionurl) package if you need equivalent functionality in your not-command-line code._
 
 ### server
 
