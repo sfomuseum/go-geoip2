@@ -3,6 +3,7 @@ GOMOD=readonly
 cli:
 	go build -mod $(GOMOD) -ldflags="-s -w" -o bin/ip2city cmd/ip2city/main.go
 	go build -mod $(GOMOD) -ldflags="-s -w" -o bin/server cmd/server/main.go
+	go build -mod $(GOMOD) -ldflags="-s -w" -o bin/location cmd/location/main.go
 
 lambda-server:
 	if test -f main; then rm -f main; fi
