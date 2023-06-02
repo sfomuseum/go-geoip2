@@ -6,7 +6,7 @@ Opinionated Go package providing tools for working with MaxMind GeoLite2 databas
 
 We want to be able to localize dates and times for people visiting SFO Museum websites and in order to do that we need to know "where" they are. Not precisely where they are but just what timezone they are in.
 
-To accomplish this we are using the openly-licensed MaxMind GeoLite2City IP lookup database. That database is _bundled_ with this package and embedded in the binary tools it produces. This produces very large binary tools but is considered an acceptible trade-off because it allows us to deploy a HTTP endpoint to map IP addresses to their timezones as a simple AWS Lambda Function URL without the need for filesystems, databases or containers (to manage filesystems or databases).
+To accomplish this we are using the openly-licensed MaxMind `GeoLite2City` IP lookup database. That database is _bundled_ with this package and embedded in the binary tools it produces. This results in very large binary tools but is considered an acceptible trade-off because it allows us to deploy a HTTP endpoint to map IP addresses to their timezones as a simple AWS Lambda Function URL without the need for filesystems, databases or containers (to manage filesystems or databases).
 
 This works for us but it may not work for you.
 
