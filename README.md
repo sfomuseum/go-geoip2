@@ -158,7 +158,7 @@ $> ./bin/location \
 Asia/Tokyo
 ```
 
-_This tool uses the [sfomuseum-go-geoip2/functionurl](functionurl) package if you need equivalent functionality in your not-command-line code._
+_This tool uses the [sfomuseum-go-geoip2/functionurl/location.go](functionurl) package if you need equivalent functionality in your not-command-line code._
 
 ### server
 
