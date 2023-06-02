@@ -19,6 +19,7 @@ This works for us but it may not work for you.
 ```
 $> make cli
 go build -mod readonly -ldflags="-s -w" -o bin/ip2city cmd/ip2city/main.go
+go build -mod readonly -ldflags="-s -w" -o bin/location cmd/location/main.go
 go build -mod readonly -ldflags="-s -w" -o bin/server cmd/server/main.go
 ```
 
