@@ -53,6 +53,10 @@ func LocationForAddress(ctx context.Context, functionurl_client_uri string, func
 
 	defer tz_rsp.Body.Close()
 
+	if tz_rsp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("Request to get timezone failed, %d %s", tz_rsp.StatusCode, tz_rsp.Status)
+	}
+	
 	tz_buf, err := io.ReadAll(tz_rsp.Body)
 
 	if err != nil {

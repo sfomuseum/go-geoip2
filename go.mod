@@ -3,16 +3,16 @@ module github.com/sfomuseum/go-geoip2
 go 1.18
 
 require (
-	github.com/aaronland/go-aws-lambda v0.0.4
+	github.com/aaronland/go-aws-lambda v0.0.5
 	github.com/aaronland/go-http-sanitize v0.0.6
-	github.com/aaronland/go-http-server v1.1.0
+	github.com/aaronland/go-http-server v1.2.0
 	github.com/jtacoma/uritemplates v1.0.0
 	github.com/oschwald/geoip2-golang v1.8.0
 	github.com/sfomuseum/go-flags v0.10.0
 )
 
 require (
-	github.com/aaronland/go-aws-session v0.1.0 // indirect
+	github.com/aaronland/go-aws-session v0.2.0 // indirect
 	github.com/aaronland/go-roster v1.0.0 // indirect
 	github.com/aaronland/go-string v1.0.0 // indirect
 	github.com/akrylysov/algnhsa v1.0.0 // indirect

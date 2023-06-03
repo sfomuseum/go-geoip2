@@ -1,11 +1,11 @@
-github.com/aaronland/go-aws-lambda v0.0.4 h1:WZDdMUbQmC1VV57zJguBi22jMOOezcVA3OyGqUUgWYE=
-github.com/aaronland/go-aws-lambda v0.0.4/go.mod h1:iwSPY3nj+nKt88kM4kG3VDo/dFU+L2UlETCy5qHYgMo=
-github.com/aaronland/go-aws-session v0.1.0 h1:1dj3oQhw8Jtecz8jeT5AAzTul0KbLZ8YhmZbql79SyQ=
-github.com/aaronland/go-aws-session v0.1.0/go.mod h1:M5imkutLPvwnI1Bb38minI3TCy1eSvwP6odMtCmBzqk=
+github.com/aaronland/go-aws-lambda v0.0.5 h1:/rZsQp6xFafZf90YlNPOFYvxM9J4xfAg5bBHbrWBqBE=
+github.com/aaronland/go-aws-lambda v0.0.5/go.mod h1:xpUKvqmvB1LwWkOX2Uf5A6PMIb+QC/rCLX9eGfV4/fM=
+github.com/aaronland/go-aws-session v0.2.0 h1:ypPBtY6VtFUKuuQCLtwshm7aFHRmYUCkuv7AcggZa88=
+github.com/aaronland/go-aws-session v0.2.0/go.mod h1:M5imkutLPvwnI1Bb38minI3TCy1eSvwP6odMtCmBzqk=
 github.com/aaronland/go-http-sanitize v0.0.6 h1:tlyIm16zOFrn+PfJlBCmTgFV9URwCho2/YlB9iAj8Eg=
 github.com/aaronland/go-http-sanitize v0.0.6/go.mod h1:qUi4rzUPcpMntpUFnHK00yQI5vd/Q7x9MFYwX91/ygI=
-github.com/aaronland/go-http-server v1.1.0 h1:vWRIYQprov6BMOtGAnO+pVCDqiEmXRg/4CHK1Nb3mkM=
-github.com/aaronland/go-http-server v1.1.0/go.mod h1:sg3+O9NJREN2YTChO5e2sdjmuhFJKTH39u+HV5V8Bpo=
+github.com/aaronland/go-http-server v1.2.0 h1:UOWlZwhW/Qb4CUG60zStmiwj1xweqOfZOA1J8jNIo2I=
+github.com/aaronland/go-http-server v1.2.0/go.mod h1:oADvZbSg6tH2aqZSRzVJW9vSJ+xVDEZqMqEjR76xeAs=
 github.com/aaronland/go-roster v1.0.0 h1:FRDGrTqsYySKjWnAhbBGXyeGlI/o5/t9FZYCbUmyQtI=
 github.com/aaronland/go-roster v1.0.0/go.mod h1:KIsYZgrJlAsyb9LsXSCvlqvbcCBVjCSqcQiZx42i9ro=
 github.com/aaronland/go-string v1.0.0 h1:fPHmC1i9JhGzgi4qdCSXKc4xTCaLLe0uvlJMu9dHhco=
