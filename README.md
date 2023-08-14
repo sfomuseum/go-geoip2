@@ -194,13 +194,15 @@ To deploy the `server` tool as an AWS Lambda Function URL first run the `lambda-
 
 ```
 $> make lambda-server
-if test -f main; then rm -f main; fi
+if test -f bootstrap; then rm -f main; fi
 if test -f server.zip; then rm -f server.zip; fi
-GOOS=linux go build -mod readonly -ldflags="-s -w" -o main cmd/server/main.go
-zip server.zip main
-  adding: main (deflated 52%)
-rm -f main
+GOARCH=arm64 GOOS=linux go build -mod vendor -ldflags="-s -w" -tags lambda.norpc -o bootstrap cmd/server/main.go
+zip server.zip bootstrap
+  adding: bootstrap (deflated 52%)
+rm -f bootstrap
 ```
+
+_Note that this will build a Lambda function for the AWS `provided.al2` runtime as [documented here](https://aws.amazon.com/blogs/compute/migrating-aws-lambda-functions-from-the-go1-x-runtime-to-the-custom-runtime-on-amazon-linux-2/). If you need to build a Lambda function for the older `go1.x` runtime you should use the `lambda-server-go1` Makefile target._
 
 Next upload the `server.zip` file to your Lambda function. The function requires no special permissions, policies or roles beyond the ability to execute Lambda functions so you can use the default auto-created role if you want. You will need to assign the following environment variables:
 

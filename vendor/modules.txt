@@ -1,10 +1,10 @@
-# github.com/aaronland/go-aws-lambda v0.0.5
+# github.com/aaronland/go-aws-lambda v0.0.7
 ## explicit; go 1.18
 github.com/aaronland/go-aws-lambda/functionurl
-# github.com/aaronland/go-aws-session v0.2.0
+# github.com/aaronland/go-aws-session v0.2.1
 ## explicit; go 1.18
 github.com/aaronland/go-aws-session
-# github.com/aaronland/go-http-sanitize v0.0.6
+# github.com/aaronland/go-http-sanitize v0.0.8
 ## explicit; go 1.12
 github.com/aaronland/go-http-sanitize
 # github.com/aaronland/go-http-server v1.2.0
@@ -26,7 +26,7 @@ github.com/aws/aws-lambda-go/lambda
 github.com/aws/aws-lambda-go/lambda/handlertrace
 github.com/aws/aws-lambda-go/lambda/messages
 github.com/aws/aws-lambda-go/lambdacontext
-# github.com/aws/aws-sdk-go v1.44.275
+# github.com/aws/aws-sdk-go v1.44.294
 ## explicit; go 1.11
 github.com/aws/aws-sdk-go/aws
 github.com/aws/aws-sdk-go/aws/awserr
@@ -74,11 +74,11 @@ github.com/jmespath/go-jmespath
 # github.com/jtacoma/uritemplates v1.0.0
 ## explicit
 github.com/jtacoma/uritemplates
-# github.com/oschwald/geoip2-golang v1.8.0
-## explicit; go 1.18
+# github.com/oschwald/geoip2-golang v1.9.0
+## explicit; go 1.19
 github.com/oschwald/geoip2-golang
-# github.com/oschwald/maxminddb-golang v1.10.0
-## explicit; go 1.18
+# github.com/oschwald/maxminddb-golang v1.11.0
+## explicit; go 1.19
 github.com/oschwald/maxminddb-golang
 # github.com/sfomuseum/go-flags v0.10.0
 ## explicit; go 1.16
@@ -86,7 +86,7 @@ github.com/sfomuseum/go-flags/flagset
 # github.com/whosonfirst/go-sanitize v0.1.0
 ## explicit; go 1.12
 github.com/whosonfirst/go-sanitize
-# golang.org/x/sys v0.1.0
+# golang.org/x/sys v0.9.0
 ## explicit; go 1.17
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
