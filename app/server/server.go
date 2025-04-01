@@ -4,7 +4,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"log"
+	"log/slog"
 	"net/http"
 
 	"github.com/aaronland/go-http-server"
@@ -14,12 +14,12 @@ import (
 	"github.com/sfomuseum/go-geoip2/http/api"
 )
 
-func Run(ctx context.Context, logger *log.Logger) error {
+func Run(ctx context.Context) error {
 	fs := DefaultFlagSet()
-	return RunWithFlagSet(ctx, fs, logger)
+	return RunWithFlagSet(ctx, fs)
 }
 
-func RunWithFlagSet(ctx context.Context, fs *flag.FlagSet, logger *log.Logger) error {
+func RunWithFlagSet(ctx context.Context, fs *flag.FlagSet) error {
 
 	flagset.Parse(fs)
 
@@ -56,7 +56,7 @@ func RunWithFlagSet(ctx context.Context, fs *flag.FlagSet, logger *log.Logger) e
 		return fmt.Errorf("Failed to create server, %w", err)
 	}
 
-	log.Printf("Listening on %s\n", s.Address())
+	slog.Info("Listening for requests", "address", s.Address())
 
 	err = s.ListenAndServe(ctx, mux)
 
